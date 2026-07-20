@@ -1,0 +1,1 @@
+class Solution {public:    vector<vector<int>> shiftGrid(vector<vector<int>>& grid, int k) {        auto ans=grid;        int m=grid.size(),n=grid[0].size();        for(int i=0;i<m;i++)        {            for(int j=0;j<n;j++)            {                int nj=(j+k)%n,ni=(i+(j+k)/n)%m;                ans[ni][nj]=grid[i][j];            }        }        return ans;    }};
